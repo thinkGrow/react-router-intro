@@ -29,6 +29,21 @@ const router = createBrowserRouter([
       {
         path: "users",
         loader: () => fetch("https://jsonplaceholder.typicode.com/users"),
+
+        // to test if loader works properly
+        // loader: () =>
+        //   new Promise((resolve) =>
+        //     setTimeout(
+        //       () =>
+        //         resolve(
+        //           fetch("https://jsonplaceholder.typicode.com/users").then(
+        //             (res) => res.json()
+        //           )
+        //         ),
+        //       1500 // 1.5 seconds delay
+        //     )
+        //   ),
+
         Component: Users,
       },
       {
