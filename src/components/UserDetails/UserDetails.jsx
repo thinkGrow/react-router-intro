@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const UserDetails = () => {
@@ -8,6 +8,12 @@ const UserDetails = () => {
 
   const navigate = useNavigate();
 
+  // const params = useParams();
+  // console.log(params.userId);
+
+  // const { userId } = useParams();
+  // console.log(userId);
+  
   return (
     <div>
       <h3>Name: {name}</h3>
